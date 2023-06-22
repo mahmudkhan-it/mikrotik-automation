@@ -1,11 +1,11 @@
 For run this program need windows os
 
-How to install:
-	|
-	|
-	|---python
-		|---pip install netmiko
-		|---pip install flask
+<h1>How to install:</h1>
+	|</br>
+	|</br>
+	|---python</br>
+		|---pip install netmiko </br>
+		|---pip install flask </br>
 
-How to run:
+<h1>How to run:</h1>
 	python server.py
