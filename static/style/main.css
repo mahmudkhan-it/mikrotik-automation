@@ -1,0 +1,127 @@
+/* COMMON CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color-dark-blue:#06283D;
+    --color-blue:#9AC5F4;
+    --color-light-blue:#99DBF5;
+    --color-sky-blue:#A7ECEE;
+    --color-light-yellow:#FFEEBB;
+}
+
+html{
+    font-size: 62.2%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+body{
+    background-color: var(--color-light-blue);
+}
+/* FORM CSS */
+.input_form_inner form{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    grid-column-gap: 30px;
+}
+.input_form_inner form input,
+.input_form_inner form textarea{
+    width: 100%;
+    padding: 8px 16px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    box-shadow: 0px 0px 12px var(--color-blue);
+}
+
+.form_left textarea{
+    resize: none;
+    height: 300px;
+}
+.input_form_inner label{
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-top: 5px;
+}
+.form_left div{
+    display: grid;
+    grid-template-columns: 0.4fr 1.6fr;
+    margin-bottom: 30px ;
+}
+
+.form_right{}
+.form_right div {
+    position: relative;
+}
+.form_right div label{
+    position: absolute;
+    top: -13px;
+    left: 15px;
+}
+.form_right textarea{
+    padding: 25px 16px !important;
+    resize: none;
+    min-height: 360px;
+    margin-bottom: 20px;
+}
+
+textarea:focus,input:focus{
+    box-shadow: 0px 0px 4px var(--color-dark-blue) !important;
+}
+.form_right button{
+    background-color: var(--color-dark-blue);
+    color: var(--color-light-yellow);
+    padding: 9px 35px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+.form_right button:hover{
+    position: relative;
+    top: 2px;
+    background-color: var(--color-light-yellow);
+    color: var(--color-dark-blue);
+    box-shadow: 0px 0px 12px var(--color-dark-blue);
+}
+/* output */
+#outputLog{
+    height: 300px;
+    width: 700px;
+    margin: 0 auto;
+    background-color: var(--color-light-yellow);
+    overflow-y: scroll;
+    padding: 15px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 12px var(--color-dark-blue);
+}
+.outputLog{
+    margin-top: 70px;
+}
+.outputLog h2{
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+/* header */
+header{
+    padding: 50px 0;
+}
+header h1{
+    text-align: center;
+    font-size: 4rem;
+}
