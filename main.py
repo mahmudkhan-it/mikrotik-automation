@@ -1,12 +1,7 @@
 from netmiko import ConnectHandler
 import time
 import os
-
-# ip address print
-# ip service print
-# 118.179.157.241
-# 118.179.222.100
-
+dev_name = "Mahmud Khan"
 # =========================
 # ROUTER LIST
 # =========================
@@ -34,7 +29,14 @@ def ipTOdic(ip,user,password,dicName=ROUTERS):
 cmdList = []
 
 
-
+banner =(" ______  _ _                     _ _                                                _             \n"
+         "|  ___ \(_) |               _   (_) |         /\         _                     _   (_)            \n"
+         "| | _ | |_| |  _  ____ ___ | |_  _| |  _     /  \  _   _| |_  ___  ____   ____| |_  _  ___  ____  \n"
+         "| || || | | | / )/ ___) _ \|  _)| | | / )   / /\ \| | | |  _)/ _ \|    \ / _  |  _)| |/ _ \|  _ \ \n"
+         "| || || | | |< (| |  | |_| | |__| | |< (   | |__| | |_| | |_| |_| | | | ( ( | | |__| | |_| | | | |\n"
+         "|_||_||_|_|_| \_)_|   \___/ \___)_|_| \_)  |______|\____|\___)___/|_|_|_|\_||m|\ahm)u|\d_k/|h|a|n|\n"
+         "                                                                                                  \n"
+         )
 # =========================
 # Main function start
 # =========================
@@ -45,7 +47,7 @@ def routerConfig(routers=ROUTERS, CMDS=cmdList):
         try:
             print("\n==========================================\n")
             print("------------------------------------------")
-            print("[+] CONFIGURE", singleRouter["host"])
+            print("[+] CONFIGURING => ", singleRouter["host"])
             print("------------------------------------------")
             # Check Ping status
             ping = os.system("ping -n 2 " + singleRouter["host"])
