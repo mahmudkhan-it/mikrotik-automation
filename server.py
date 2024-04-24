@@ -31,9 +31,9 @@ def ip():
         ipListarr = ipList.split()
         for ip in ipListarr:
             main.ipTOdic(ip,userName,password)
-            print(f"router add")
+            print(f"[+] Router add :", ip )
         # start router configuration
-        if main.dev_name == "Mahmud Khan":
+        if main.dev_name == "Dev by Mahmud Khan & idea by MR. Pavel":
             main.routerConfig()
         # CSV OUTPUT
         result_output.outputToCSV(main.outputDataCSV)

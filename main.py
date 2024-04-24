@@ -1,7 +1,7 @@
 from netmiko import ConnectHandler
 import time
 import os
-dev_name = "Mahmud Khan"
+dev_name = "Dev by Mahmud Khan & idea by MR. Pavel"
 # =========================
 # ROUTER LIST
 # =========================
