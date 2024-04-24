@@ -28,12 +28,12 @@
                             <!-- PASSWORD -->
                             <div>
                                 <label for="pass">Password</label>
-                                <input required name="pass" id="pass" placeholder="PASSWORD" type="text">
+                                <input required name="pass" id="pass" placeholder="PASSWORD" type="password">
                             </div>
                             <!-- IP LIST -->
                             <div>
                                 <label for="iplist">IP List</label>
-                                <textarea name="ipList"  required name="" id="iplist" placeholder="EX: 192.168.0.1" ></textarea>
+                                <textarea class="scroolbar" name="ipList" oninput="auto_grow(this)" required name="" id="iplist" placeholder="EX: 192.168.0.1" ></textarea>
                             </div>
                         </div>
                         <!-- FORM RIGHT SECTION -->
@@ -41,7 +41,7 @@
                             <!-- CMD -->
                             <div>
                                 <label for="cmd">Command</label>
-                                <textarea name="cmd" required oninput="auto_grow(this)" name="" id="cmd" placeholder="EX: ip route show"></textarea>
+                                <textarea class="scroolbar" name="cmd" required oninput="auto_grow(this)" name="" id="cmd" placeholder="EX: ip route show"></textarea>
                             </div>
 
                             <button value="submit">RUN</button>
@@ -65,8 +65,12 @@
             element.style.height = "5px";
             element.style.height = (element.scrollHeight) + "px";
         }
-textare
+        
+        
+
     </script>
     <script src="{{ url_for('static',filename='js/main.js') }}"></script>
+
+
 </body>
 </html>

@@ -11,7 +11,9 @@
     --color-sky-blue:#A7ECEE;
     --color-light-yellow:#FFEEBB;
 }
-
+.scroolbar -webkit-scrollbar {
+    display: none;
+  }
 html{
     font-size: 62.2%;
     font-family: Arial, Helvetica, sans-serif;
@@ -48,7 +50,7 @@ body{
 
 .form_left textarea{
     resize: none;
-    height: 300px;
+    /* height: 300px; */
 }
 .input_form_inner label{
     font-size: 1.4rem;
@@ -73,7 +75,7 @@ body{
 .form_right textarea{
     padding: 25px 16px !important;
     resize: none;
-    min-height: 360px;
+    /* min-height: 360px; */
     margin-bottom: 20px;
 }
 

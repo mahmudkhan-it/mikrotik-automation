@@ -1,10 +1,8 @@
-
 let output = document.getElementById("outputLog")
 setInterval(() => {
     fetch("http://127.0.0.1:8080/log-api")
     .then(response => response.json())
     .then(data => {
-        console.log(data);
         if (data.length==0) {
             output.innerHTML=""
         }
@@ -13,7 +11,9 @@ setInterval(() => {
             output.scrollTop = output.scrollHeight;
         }
     });
-    
-}, 1000);
 
+}, 100000);
 
+document.addEventListener('loadstart',()=>{
+  console.log("loading");
+})

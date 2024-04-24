@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <section>
+        <h1>Feature</h1>
+        <ol>
+            <li>It can change or update all router by one click</li>
+            <li>Easy to use</li>
+            <li>Easy to setup</li>
+        </ol>
+    </section>
+    <section>
+        <h1>Install process</h1>
+        <ol>
+            <li>Install python on your system</li>
+            <li>
+                Install Netmiko
+                <ul>
+                    <li>Open cmd, powershell or terminal</li>
+                    <li>Type [ pip install netmiko ]</li>
+                    <li><img width="400px" src="./ss2.PNG" alt="#"></li>
+                    <li>Press Enter</li>
+                </ul>
+            </li>
+            <li>
+                Install Flask
+                <ul>
+                    <li>Open cmd, powershell or terminal</li>
+                    <li>Type [ pip install Flask ]</li>
+                    <li><img width="400px" src="./ss3.PNG" alt="#"></li>
+                    <li>Press Enter</li>
+                </ul>
+            </li>
+        </ol>
+    </section>
+
+    <section>
+        <h1>SETUP & USE</h1>
+        <ol>
+            <li>Set SSH Port
+                <ul>
+                    <li>Open Mikrotik_Automation folder</li>
+                    <li>Open main.py on any text editor</li>
+                    <li>Set ssh port number</li>
+                    <li><img width="400px" src="./ss1.PNG" alt="#"></li>
+                </ul>
+            </li>
+            <li>To run this program open cmd/terminal from Mikrotik_Automation folder</li>
+            <li>Type [ python server.py ] and press enter</li>
+            <li><img width="400px" src="./ss4.PNG" alt="#"></li>
+            <li>Now open you browser and type [ http://127.0.0.1:8080/ ]</li>
+            <li>Click on the Router Configure button</li>
+            <li><img width="400px" src="./ss5.PNG" alt="#"></li>
+            <li>
+                Fill all input area
+                <ul>
+                    <li>Set Mikrotik username on Username input area</li>
+                    <li>Set Mikrotik password on Password input area</li>
+                    <li>Set Mikrotik IP list on IP List input area. Like,<br>192.168.0.1<br>192.168.0.2<br>192.168.0.3</li>
+                    <li>set Mikrotik command on Command input area. Like,<br>ip address print<br>ip service print</address></li>
+                    <li><img width="400px" src="./ss6.PNG" alt="#"></li>
+                </ul>
+            </li>
+            <li>Now hit on run button to execute the program</li>
+            <li>You can see the log from terminal</li>
+            <li><img width="400px" src="./ss7.PNG" alt="#"></li>
+            <li>You will get a output file named output.csv on Mikrotik_Automation folder</li>
+            <li><img width="400px" src="./ss8.PNG" alt="#"></li>
+            <li><img width="400px" src="./ss9.PNG" alt="#"></li>
+        </ol>
+    </section>
+</body>
+</html>

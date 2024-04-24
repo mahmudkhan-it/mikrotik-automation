@@ -2,6 +2,10 @@ from netmiko import ConnectHandler
 import time
 import os
 
+# ip address print
+# ip service print
+# 118.179.157.241
+# 118.179.222.100
 
 # =========================
 # ROUTER LIST
@@ -12,13 +16,13 @@ def ipTOdic(ip,user,password,dicName=ROUTERS):
     a = {
         'device_type': 'mikrotik_routeros',
          'host': str(ip),
+         'port': 422,
          'username': str(user),
          'password': str(password),
          'conn_timeout': 20,
          'auth_timeout': 20,
          'banner_timeout': 20,
     }
-    print(a)
     ROUTERS.append(a)
 
 
@@ -35,23 +39,21 @@ cmdList = []
 # Main function start
 # =========================
 outputLog = []
+outputDataCSV =[]
 def routerConfig(routers=ROUTERS, CMDS=cmdList):
-    print(ROUTERS)
     for singleRouter in routers:
         try:
             print("\n==========================================\n")
-
+            print("------------------------------------------")
+            print("[+] CONFIGURE", singleRouter["host"])
+            print("------------------------------------------")
             # Check Ping status
             ping = os.system("ping -n 2 " + singleRouter["host"])
 
             if ping == 0:
-                print("[+]Router is Up!")
                 # Try to connect with router
                 net_connect = ConnectHandler(**singleRouter)
                 time.sleep(0.5)
-
-                # Connection done
-                print("[+] CONNECT DONE TO ->", singleRouter["host"])
 
                 # Command execute
                 for cmd in CMDS:
@@ -61,10 +63,16 @@ def routerConfig(routers=ROUTERS, CMDS=cmdList):
                 print("------------------------------------------")
                 print("[+] CONFIGURATION DONE ")
                 print("------------------------------------------")
+                csv_data = [singleRouter["host"], singleRouter["host"], "SUCCESS"]
+                outputDataCSV.append(csv_data)
+
                 output = []
+
 
             else:
                 print("[!]Router is Down")
+                csv_data = [singleRouter["host"], singleRouter["host"], "ROUTER DOWN"]
+                outputDataCSV.append(csv_data)
                 continue
 
 
@@ -73,6 +81,10 @@ def routerConfig(routers=ROUTERS, CMDS=cmdList):
             print("------------------------------------------")
             print("[!] ERROR ")
             print("------------------------------------------")
+            csv_data = [singleRouter["host"], singleRouter["host"], "GET ERROR"]
+            outputDataCSV.append(csv_data)
+
+
 
 
 

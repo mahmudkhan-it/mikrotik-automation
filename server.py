@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, jsonify
 import main
+import result_output
 
 app = Flask(__name__)
 
@@ -43,10 +44,14 @@ def ip():
         # start router configuration
         main.routerConfig()
 
+
+        # CSV OUTPUT
+        result_output.outputToCSV(main.outputDataCSV)
         # Clear router and cmd
         main.ROUTERS=[]
         main.cmdList=[]
         main.outputLog=[]
+        main.outputDataCSV=[]
 
 
         return render_template('test.html', data = summery)
